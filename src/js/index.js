@@ -2,7 +2,8 @@ const MD_CONF = {breaks: true};
 
 const Vue = require("vue"),
       marked = require("marked").setOptions(MD_CONF),
-      {html: tidyHtml, css: tidyCss} = require('js-beautify');
+      {html: tidyHtml, css: tidyCss} = require('js-beautify'),
+      Clipboard = require("clipboard");
 
 const DEMO = require("./demo.js");
 
@@ -34,3 +35,5 @@ new Vue({
     tidy: tidy,
   }
 });
+
+new Clipboard("#copy");

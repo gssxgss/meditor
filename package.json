@@ -9,6 +9,7 @@
     "babel-preset-es2015": "latest",
     "babelify": "latest",
     "browserify": "latest",
+    "clipboard": "^1.5.5",
     "colors": "latest",
     "connect": "latest",
     "connect-livereload": "latest",

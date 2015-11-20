@@ -12,7 +12,7 @@
           <svg class="svg svg-cross"><use xlink:href="#svg-cross"></use></svg>
         </button>
         <header class="modal-title">HTML</header>
-        <button class="modal-btn btn-copy"><span class="first-letter">C</span><span class="rest-letters">opy</span></button>
+        <button id="copy" class="modal-btn btn-copy" data-clipboard-target="#sourcecode"><span class="first-letter">C</span><span class="rest-letters">opy</span></button>
       </div>
 
     </div>

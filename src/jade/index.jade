@@ -31,6 +31,6 @@ block content
         div.app-preview(v-html="input | marked" v-bind:class="{'meditor-ui': includeCss}")
 
     modal(:show.sync="showModal")
-      textarea.app-sourcecode(slot="code" spellcheck="false") {{ input | tidy }}
+      textarea#sourcecode.app-sourcecode(slot="code" spellcheck="false") {{ input | tidy }}
 
   include modal.tpl
