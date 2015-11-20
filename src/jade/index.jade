@@ -8,15 +8,20 @@ block append script-body
   script(src="js/index.js")
 
 block content
+  include icon.svg
   main#app.meditor
-    .app-menu
+    .app-panel
       header.app-header Meditor
-      nav.app-
-        div.
-          input#include_css(type="checkbox" name="checkbox" v-model="includeCss")
-          label(for="include_css") スタイル
-        |<button id="show-modal" class="app-nav-item" @click="showModal = true">生成</button>
-        a.app-nav-link(href="http://www.markdown.jp/syntax/" target="_blank") 記法紹介
+      nav.app-menu
+        a.app-menu-btn.btn-help(href="http://www.markdown.jp/syntax/" target="_blank" title="記法紹介") ?
+        div.app-menu-btn.btn-css(title="スタイルを利用する" v-bind:class="{'on': includeCss}")
+          input#include_css(class="checkbox" type="checkbox" name="checkbox" v-model="includeCss")
+          label.label(for="include_css")
+            span.first-letter C
+            |ss
+        |<button id="show-modal" class="app-menu-btn btn-generate" @click="showModal = true" title="htmlを生成する">
+        |  <svg class="svg svg-paper"><use xlink:href="#svg-paper"></use></svg>
+        |</button>
 
     .app-editor
       div.app-textarea-wrapper
@@ -26,6 +31,6 @@ block content
         div.app-preview(v-html="input | marked" v-bind:class="{'meditor-ui': includeCss}")
 
     modal(:show.sync="showModal")
-      pre(slot="code") {{ input | tidy }}
+      textarea.app-sourcecode(slot="code" spellcheck="false") {{ input | tidy }}
 
   include modal.tpl

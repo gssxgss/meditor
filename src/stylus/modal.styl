@@ -1,43 +1,98 @@
-.modal-mask {
-  position: fixed;
-  z-index: 9998;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .5);
-  display: table;
-  transition: opacity .3s ease;
-}
+.modal-mask
+  position: fixed
+  z-index: 100
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.6)
+  transition: opacity .3s ease
+  overflow: hidden
 
-.modal-wrapper {
-  display: table-cell;
-  vertical-align: middle;
-}
+.modal-container
+  position: relative
+  margin: 5vh 0 0 20vw
+  width: 60vw
+  height: 90vh
+  background: white
+  border-radius: 4px
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2)
+  transition: all .3s ease
+  overflow: hidden
 
-.modal-container {
-  width: 300px;
-  margin: 0px auto;
-  padding: 20px 30px;
-  background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-  transition: all .3s ease;
-  font-family: Helvetica, Arial, sans-serif;
-}
+.modal-body
+  box-sizing: border-box
+  margin: 0
+  height: 100%
+  width: 100%
+  padding-right: 60px
 
-.modal-header h3 {
-  margin-top: 0;
-  color: #42b983;
-}
+.modal-menu
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  width: 60px
+  background: #4DB6AC
+  font-family: Raleway, sans-serif
+  font-size: 60px
+  line-height: 60px
+  font-weight: 200
+  color: white
 
-.modal-body {
-  margin: 20px 0;
-}
+.modal-title
+  margin-top: 10px
+  transform: rotate(90deg)
 
-.modal-default-button {
-  float: right;
-}
+.modal-btn
+  display: block
+  width: 60px
+  height: 60px
+  padding: 0
+  background: transparent
+  border: 0
+  outline: 0
+  color: inherit
+  transition: 0.3s
+  cursor: pointer
+  &:hover
+    background: rgba(255, 255, 255, 0.2)
+.btn-close
+  &:hover
+    transform: rotate(90deg)
+.btn-copy
+  position: absolute
+  bottom: 0
+  font-family: inherit
+  font-weight: inherit
+  > .first-letter
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    font-size: 60px
+  > .rest-letters
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(0%, -50%)
+    font-size: 14px
+    font-weight: 400
+
+
+.app-sourcecode
+  box-sizing: border-box
+  width: 100%
+  height: 100%
+  padding: 2em
+  border: 0
+  background: #fafafa
+  font: 14px/1.5 monospace
+  resize: none
+  outline: none
+  transition: 0.5s
+  &:focus
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) inset
 
 /*
  * the following styles are auto-applied to elements with
@@ -48,11 +103,11 @@
  * these styles.
  */
 
-.modal-enter, .modal-leave {
-  opacity: 0;
-}
+.modal-enter, .modal-leave
+  opacity: 0
+
 
 .modal-enter .modal-container,
-.modal-leave .modal-container {
-  transform: scale(1.1);
-}
+.modal-leave .modal-container
+  transform: scale(1.1)
+
