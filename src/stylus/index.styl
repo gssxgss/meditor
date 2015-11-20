@@ -1,5 +1,7 @@
 @require nib
 
+menuWidth = 32px
+
 body
   margin: 0
 
@@ -13,14 +15,24 @@ body
   right: 0
   top: 0
   bottom: 0
-  width: 64px
-  background: #CDDC39
+  width: menuWidth
+  background: #424242
   color: white
   font: 16px/2 font.sansSerif
 
 .app-header
-  display: block
-  font: 200 24px/1 "Raleway", sans-serif
+  position: absolute
+  top: (10px - menuWidth)
+  left: 0
+  height: menuWidth
+  transform: rotate(90deg)
+  transform-origin: 0% 100%
+  font: 200 24px/menuWidth "Raleway", sans-serif
+
+.app-nav
+  position: absolute
+  bottom: 0
+  left: 0
 
 .app-nav-link
   display: block
@@ -30,30 +42,11 @@ body
 
 .app-editor
   box-sizing: border-box
-  width: 100%
-  height: 100%
-
-.app-editor-label
-  $size = 60px
   position: absolute
-  top: ($size / -2)
-  right: ($size / -2)
-  margin: 0
-  width: $size
-  height: $size
-  vertical-align: bottom
-  transform: rotate(45deg)
-  background: #e0e0e0
-  color: white
-  font: 10px/2 font.sansSerif
-  text-align: center
-  pointer-events: none
-  transition: background 0.3s
-  > .text
-    position: absolute
-    bottom: 0
-    left: 0
-    right: 0
+  top: 0
+  bottom: 0
+  right: menuWidth
+  left: 0
 
 $app-panel
   position: absolute
@@ -66,6 +59,29 @@ $app-panel
 .app-textarea-wrapper
   @extend $app-panel
   left: 0
+
+.app-textarea-label
+  $size = 60px
+  position: absolute
+  top: ($size / -2)
+  right: ($size / -2)
+  margin: 0
+  width: $size
+  height: $size
+  vertical-align: bottom
+  transform: rotate(45deg)
+  background: #e0e0e0
+  color: white
+  font: 9px/2 font.sansSerif
+  text-align: center
+  pointer-events: none
+  transition: background 0.3s
+  > .text
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+
 
 .app-textarea
   box-sizing: border-box
@@ -92,8 +108,6 @@ $app-panel
   @extend $app-panel
   right: 0
   overflow: hidden
-  > .app-editor-label
-    background-color: #8BC34A
 
 .app-preview
   padding: 8px // to slimulate default body margin

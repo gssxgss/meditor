@@ -17,5 +17,9 @@ const compile = [
 gulp.task("build", () => {
   // some tasks (ex. embeded data-url in stylus) depend on compiled static files
   // so we need to separate them!
-  runSequence(["clean"], copy, compile, ["replace"]);
+  if (config.isDebug) {
+    runSequence(["clean"], copy, compile);
+  } else {
+    runSequence(["clean"], copy, compile, "replace");
+  }
 });

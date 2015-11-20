@@ -33,11 +33,13 @@ module.exports =
 # リンクと画像
 ---
 
-[リンクテキスト](http://www.kayac.com/)
+[link](http://www.kayac.com/)
+
+[link with title on hover](http://www.kayac.com/ "タイトル")
 
 ![画像](https://www.google.co.jp/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)
 
-[![画像](https://www.google.co.jp/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)](https://www.google.co.jp/)
+[![画像](https://www.google.co.jp/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)](https://www.google.co.jp/ "google")
 
 > hello
 > world
