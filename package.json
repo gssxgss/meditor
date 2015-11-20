@@ -1,0 +1,50 @@
+{
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "NODE_ENV=production gulp build",
+    "sprite": "gulp sprite",
+    "postinstall": "npm test"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "latest",
+    "babelify": "latest",
+    "browserify": "latest",
+    "colors": "latest",
+    "connect": "latest",
+    "connect-livereload": "latest",
+    "del": "latest",
+    "glob": "latest",
+    "gulp": "latest",
+    "gulp-if": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-jade": "latest",
+    "gulp-livereload": "latest",
+    "gulp-load-plugins": "latest",
+    "gulp-plumber": "latest",
+    "gulp-rename": "latest",
+    "gulp-replace": "^0.5.4",
+    "gulp-sourcemaps": "latest",
+    "gulp-stylus": "latest",
+    "gulp-uglify": "latest",
+    "gulp.spritesmith": "latest",
+    "imagemin-pngquant": "latest",
+    "is-directory": "latest",
+    "js-beautify": "^1.5.10",
+    "lodash": "latest",
+    "marked": "^0.3.5",
+    "mkdirp": "latest",
+    "modernizr": "latest",
+    "nib": "latest",
+    "require-dir": "latest",
+    "run-sequence": "latest",
+    "serve-static": "latest",
+    "stylus": "latest",
+    "tap": "latest",
+    "through2": "latest",
+    "vue": "^1.0.8",
+    "yargs": "latest"
+  },
+  "browser": {
+    "common": "./site-config/common.js"
+  }
+}

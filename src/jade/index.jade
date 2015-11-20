@@ -1,0 +1,32 @@
+extend base
+
+block append stylesheet
+  link(href="https://fonts.googleapis.com/css?family=Raleway:200,400" rel="stylesheet")
+  link(href="css/index.css", rel="stylesheet")
+  // meditor-ui.css
+block append script-body
+  script(src="js/index.js")
+
+block content
+  main#app.meditor
+    .app-menu
+      header.app-header Meditor
+      nav.app-nav
+        div
+          input#include_css(type="checkbox" name="checkbox" v-model="includeCss")
+          label(for="include_css") スタイル
+        |<button id="show-modal" class="app-nav-item" @click="showModal = true">生成</button>
+        a.app-nav-link(href="http://www.markdown.jp/syntax/" target="_blank") 記法紹介
+
+    .app-editor
+      div.app-textarea-wrapper
+        textarea.app-textarea(v-model="input" debounce="500")
+        h3.app-editor-label: span.text editor
+      div.app-preview-wrapper
+        div.app-preview(v-html="input | marked" v-bind:class="{'meditor-ui': includeCss}")
+        h3.app-editor-label: span.text preview
+
+    modal(:show.sync="showModal")
+      pre(slot="code") {{ input | tidy }}
+
+  include modal.tpl

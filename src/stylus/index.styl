@@ -1,0 +1,103 @@
+@require nib
+
+body
+  margin: 0
+
+.meditor
+  position: relative
+  width: 100vw
+  height: 100vh
+
+.app-menu
+  position: absolute
+  right: 0
+  top: 0
+  bottom: 0
+  width: 64px
+  background: #CDDC39
+  color: white
+  font: 16px/2 font.sansSerif
+
+.app-header
+  display: block
+  font: 200 24px/1 "Raleway", sans-serif
+
+.app-nav-link
+  display: block
+  color: inherit
+  text-decoration: none
+
+
+.app-editor
+  box-sizing: border-box
+  width: 100%
+  height: 100%
+
+.app-editor-label
+  $size = 60px
+  position: absolute
+  top: ($size / -2)
+  right: ($size / -2)
+  margin: 0
+  width: $size
+  height: $size
+  vertical-align: bottom
+  transform: rotate(45deg)
+  background: #e0e0e0
+  color: white
+  font: 10px/2 font.sansSerif
+  text-align: center
+  pointer-events: none
+  transition: background 0.3s
+  > .text
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+
+$app-panel
+  position: absolute
+  top: 0
+  box-sizing: border-box
+  height: 100%
+  width: 50%
+  overflow: hidden
+
+.app-textarea-wrapper
+  @extend $app-panel
+  left: 0
+
+.app-textarea
+  box-sizing: border-box
+  display: block
+  width: 100%
+  height: 100%
+  padding: 1em 2em
+  background: transparent
+  border: 0
+  outline: 0
+  font: caption
+  font-size: 1rem
+  line-height: 1.8
+  resize: none
+  background: #fafafa
+  color: #424242
+  transition: background 0.3s
+  &:focus
+    background: #FFF8E1
+    + .app-editor-label
+      background-color: #FFC107
+
+.app-preview-wrapper
+  @extend $app-panel
+  right: 0
+  overflow: hidden
+  > .app-editor-label
+    background-color: #8BC34A
+
+.app-preview
+  padding: 8px // to slimulate default body margin
+  height: 100%
+  overflow: auto
+
+@require "modal"

@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><!-- IE Setting--><meta http-equiv="X-UA-Compatible" content="IE=Edge"><!-- Meta Infomation--><title>エディター</title><meta name="description" content="エディター"><meta name="keywords" content="エディター"><!-- viewport--><meta name="viewport" content="width=device-width,initial-scale=1.0"><link href="https://fonts.googleapis.com/css?family=Raleway:200,400" rel="stylesheet"><link href="css/index.css" rel="stylesheet"><!-- inject:css--><link href="css/meditor-ui.css" rel="stylesheet"><!-- endinject--><script src="js/lib/modernizr.js"></script></head><body><main id="app" class="meditor"><div class="app-menu"><header class="app-header">Meditor</header><nav class="app-nav"><div><input id="include_css" type="checkbox" name="checkbox" v-model="includeCss"><label for="include_css">スタイル</label></div><button id="show-modal" class="app-nav-item" @click="showModal = true">生成</button><a href="http://www.markdown.jp/syntax/" target="_blank" class="app-nav-link">記法紹介</a></nav></div><div class="app-editor"><div class="app-textarea-wrapper"><textarea v-model="input" debounce="500" class="app-textarea"></textarea><h3 class="app-editor-label"><span class="text">editor</span></h3></div><div class="app-preview-wrapper"><div v-html="input | marked" v-bind:class="{'meditor-ui': includeCss}" class="app-preview"></div><h3 class="app-editor-label"><span class="text">preview</span></h3></div></div><modal :show.sync="showModal"><pre slot="code">{{ input | tidy }}</pre></modal></main><!-- template for the modal component -->
+<script type="x/template" id="modal_tpl">
+  <div class="modal-mask" v-show="show" transition="modal">
+    <div class="modal-wrapper">
+      <div class="modal-container">
+
+        <div class="modal-header">
+          <button class="modal-default-button"
+            @click="show = false">
+            OK
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <slot name="code"></slot>
+        </div>
+
+        <div class="modal-footer">
+          <button>コピー</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script><script src="js/index.js"></script></body></html>

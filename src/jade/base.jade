@@ -1,0 +1,21 @@
+doctype
+html
+  head
+    block meta
+      meta(charset="utf-8")
+      // IE Setting
+      meta(http-equiv="X-UA-Compatible", content="IE=Edge")
+      // Meta Infomation
+      title= meta.title
+      meta(name="description", content=meta.description)
+      meta(name="keywords", content=meta.keywords)
+      // viewport
+      meta(name="viewport", content="width=device-width,initial-scale=1.0")
+    block stylesheet
+    block script-head
+      script(src="js/lib/modernizr.js")
+
+  body
+    block content
+    block script-body
+      script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
