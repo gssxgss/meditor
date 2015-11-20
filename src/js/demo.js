@@ -1,56 +1,42 @@
 module.exports =
-`# タイトルと段落
+`### 例文
 ---
 
-# タイトルh1
-## タイトルh2
-### タイトルh3
-#### タイトルh4
-##### タイトルh5
-###### タイトルh6
+# Google 利用規約
 
-段落
-改行
-
-新しい段落
-
-**太字**と_イタリック体_
-
-# リスト
----
-
-- 親リスト
-  親リストなかの段落
-  - 子リスト
-    子リストなかの段落
-
-
-1. リスト
-2. with
-  1. こんにちは
-3. 数字
-
-# リンクと画像
----
-
-[link](http://www.kayac.com/)
-
-[link with title on hover](http://www.kayac.com/ "タイトル")
+**最終更新日**: _2014年4月14日_ （[旧版を表示する](https://www.google.com/intl/ja/policies/terms/archive/)）
 
 ![画像](https://www.google.co.jp/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)
 
-[![画像](https://www.google.co.jp/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)](https://www.google.co.jp/ "google")
+## Google へようこそ
 
-> hello
-> world
->> hello
->> world
+Google の製品およびサービス（以下「本サービス」）をご利用いただきありがとうございます。本サービスは、1600 Amphitheatre Parkway, Mountain View, CA 94043, United States に所在する Google Inc.（以下「Google」）が提供します。
 
-\`\`\`
-<html>
-  <head></head>
-  <body></body>
-</html>
-\`\`\`
+ユーザーは、本サービスを利用することにより、本規約に同意することになります。
+以下を注意してお読みください。
+
+本サービスは多岐にわたるため、追加規定または特定の製品についての条件（年齢制限を含みます）が適用されることがあります。
+追加規定は、関連する本サービスと共に入手可能であり、ユーザーがその対象となる本サービスを利用した場合に、その追加規定は Google とユーザーの間の契約の一部となります。
+
+#### 更新情報: 利用規約
+
+- 2014年4月30日
+- [2013年11月11日](https://www.google.com/intl/ja/policies/terms/archive/20131111/)
+- [2012年3月1日](https://www.google.com/intl/ja/policies/terms/archive/20120301/)
+
+---
+
+# 利用規約
+
+1. **定義**
+  本規約では、以下の用語を使用します。
+  1. 「コンテンツ」とは、文章、音声、音楽、画像、動画、ソフトウェア、プログラム、コードその他の情報のことをいいます。
+  2. 「本コンテンツ」とは、本サービスを通じてアクセスすることができるコンテンツのことをいいます。
+2. **規約への同意**
+  1. お客様は、本規約の定めに従って本サービスを利用しなければなりません。お客様は、本規約に有効かつ取消不能な同意をしないかぎり本サービスを利用できません。
+
+
+> これは過去のバージョンの Google 利用規約です。
+> [現在のバージョン](http://kayac.com)をご覧になれます。
 
 `;

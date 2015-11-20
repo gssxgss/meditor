@@ -7,9 +7,9 @@ const Vue = require("vue"),
 
 const DEMO = require("./demo.js");
 
-
 const tidy = (str) => {
-  return tidyHtml(marked(str));
+  let htmlStr = `<html><head><title>利用規約</title></head><body>${marked(str)}</body>`
+  return tidyHtml(htmlStr);
 };
 
 Vue.component("modal", {
@@ -36,4 +36,4 @@ new Vue({
   }
 });
 
-new Clipboard("#copy");
+const clipboard = new Clipboard("#copy");
