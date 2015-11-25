@@ -8,7 +8,7 @@ const Vue = require("vue"),
 const DEMO = require("./demo.js");
 
 const tidy = (str) => {
-  let htmlStr = `<html><head><title>利用規約</title></head><body>${marked(str)}</body>`
+  let htmlStr = `<html><head><title>利用規約</title></head><body>${marked(str)}</body></html>`
   return tidyHtml(htmlStr);
 };
 
@@ -27,7 +27,7 @@ new Vue({
   el: '#app',
   data: {
     input: DEMO,
-    includeCss: true,
+    includeCss: false,
     showModal: false
   },
   filters: {

@@ -20,6 +20,6 @@ gulp.task("build", () => {
   if (config.isDebug) {
     runSequence(["clean"], copy, compile);
   } else {
-    runSequence(["clean"], copy, compile, "replace");
+    runSequence(["clean"], copy, compile);
   }
 });
