@@ -29,16 +29,15 @@ new Vue({
   filters: {
     marked: marked,
     tidy: function(str) {
-      let styles = this.includeCss ? this.styles : "",
-          htmlStr = `
+      let htmlStr = `
         <!Doctype html>
         <html>
           <head>
             <meta charset="utf-8">
             <title>利用規約</title>
-            <style>${styles}</style>
+            <style>${ this.includeCss ? this.styles : "" }</style>
           </head>
-          <body>${marked(str)}</body>
+          <body${ this.includeCss ? " class=\"meditor-ui\"" : "" }>${marked(str)}</body>
         </html>
       `;
       return tidyHtml(htmlStr);
