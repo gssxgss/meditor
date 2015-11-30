@@ -1,7 +1,7 @@
 "use strict";
 
 const gulp = require("gulp");
-const awspublish = require("gulp-awspublish")();
+const awspublish = require("gulp-awspublish");
 const config = require("../config");
 
 gulp.task("publish", ["build"], function() {
