@@ -6,11 +6,11 @@ const config = require("../config");
 
 gulp.task("publish", ["build"], function() {
 
-  let credentials = require(`${config.siteConfig}/aws.json`),
+  let credentials = require(`${config.awsConf}`),
       publisher = awspublish.create(credentials);
 
   let headers = {
-    "Cache-Control": "max-age=315360000, no-transform, public"
+    "Cache-Control": "no-cache"
   };
 
   return gulp.src(`${config.dest}/**/*`)
