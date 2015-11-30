@@ -16,6 +16,7 @@
     "del": "latest",
     "glob": "latest",
     "gulp": "latest",
+    "gulp-awspublish": "^3.0.1",
     "gulp-if": "latest",
     "gulp-imagemin": "latest",
     "gulp-jade": "latest",
