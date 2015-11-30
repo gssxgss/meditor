@@ -5,7 +5,6 @@ const runSequence = require("run-sequence");
 
 const copy = [
   "copy",
-  "modernizr",
 ];
 
 const compile = [

@@ -1,8 +1,8 @@
 {
-  "params": {
-    "Bucket": "..."
-  },
-  "endpoint": "...",
-  "accessKeyId": "...",
-  "secretAccessKey": "..."
+    "params": {
+        "Bucket": ""
+    },
+    "accessKeyId": "",
+    "secretAccessKey": "",
+    "region": ""
 }
