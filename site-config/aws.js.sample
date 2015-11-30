@@ -1,8 +1,8 @@
-{
+module.exports = {
   "params": {
     "Bucket": "..."
   },
   "endpoint": "...",
   "accessKeyId": "...",
   "secretAccessKey": "..."
-}
+};
