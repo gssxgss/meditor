@@ -4,7 +4,7 @@ const gulp = require("gulp");
 const awspublish = require("gulp-awspublish")();
 const config = require("../config");
 
-gulp.task("publish", function() {
+gulp.task("publish", ["build"], function() {
 
   let credentials = require(`${config.siteConfig}/aws.json`),
       publisher = awspublish.create(credentials);
