@@ -141,3 +141,4 @@ $RECYCLE.BIN/
 
 # debug build directory
 /debug
+/aws.json
